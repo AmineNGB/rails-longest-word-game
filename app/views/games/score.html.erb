@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<% if @result_bool || @word == "" %>
+    <p>Sorry but <strong style="font-size: 1em"><%= @word.upcase %></strong> can't be built out of <%= @lol2.join(", ").upcase %></p>
+<% elsif @test == false %>
+    <p>Sorry but <strong style="font-size: 1em"><%= @word.upcase %></strong> does not seem to be a valid English word ...</p>
+<% else %>
+    <p><strong style="font-size: 1em">Congratulations!</strong> <%= @word.upcase %> is a valid English word</p>
+<% end %>
+<a href="/new">Play again</a>

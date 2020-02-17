@@ -1,0 +1,11 @@
+<h1>New game</h1>
+<div class="letters">
+<% @tab.each do |x| %>
+  <p class="letter"><%= x %></p>
+<% end %>
+</div>
+<form action="/score" method="get">
+  <input id="input-btn" type="text" name="word" placeholder="type the longest word" onClick="test()">
+  <input type="hidden" name="tab" value="<%= @tab.join %>" placeholder="type the longest word">
+  <input type="submit">
+</form>
